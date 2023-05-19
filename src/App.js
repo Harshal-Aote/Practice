@@ -28,8 +28,21 @@ function App() {
         type='number' 
          placeholder='Enter Number'/>
     </div>
+
+    <div>
+      <input
+       value={inputValue}
+       onChange={(e) => {
+ 
+        setInputValue(e.target.value)
+        // console.log('inputValue',inputValue);
+       }}
+        type='number' 
+         placeholder='Enter Number'/>
+    </div>
+
     <button onClick={printValue}>print</button>
-   { inputValue ? <Add a={inputValue} b='2' ></Add>: ''} 
+   { inputValue ? <Add a={inputValue} b={inputValue} ></Add>: ''} 
     </div>
   );
 }
